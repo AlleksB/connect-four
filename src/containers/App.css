@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to right, rgb(254, 255, 184), rgb(255, 163, 163));;
+}
+
+.coolTitle {
+  margin: 0;
+  font-family: 'Rocher';
+  font-size: 50px;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px;
+}
+
+.tiltTitle {
+  text-align: center;
+  width: 350px;
+  margin: auto;
+}
+
+.cell {
+  height: 70px;
+  width: 70px;
+  margin-top: -2px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  transition: border-radius .2s ease;
+}
+
+.board {
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  border: 5px solid #000;
+  border-radius: 20px;
+  transition: background .3s ease;
+}
+
+.board:hover {
+  background: rgba(255, 165, 0, 0.5);
+}
+
+.redBorder {
+  margin: auto;
+  border: 5px solid #E7040F;
+  border-radius: 20px;
+  width: 600px;
+}
+
+.textInputs {
+  display: flex;
+  padding-left: 50px;
+}
+
+.textBox {
+  width: 100px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.inputTitle {
+  color: darkorange;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.gameStatus {
+  position: absolute;
+  left: 75%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.flexBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.enlarge {
+  transition: all .3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.enlarge:hover {
+  border-color: black;
+}
+
+.rematchButton {
+  --c:  #E95A49;
+  
+  box-shadow: 0 0 0 .1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background:
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+
+  font-family: sans-serif;
+  cursor: pointer;
+  padding: .1em .6em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -95px;
+}
+.rematchButton:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+.rematchButton:active {
+  box-shadow: 0 0 9e9q inset #0009; 
+  background-color: var(--c);
+  color: #fff;
+}
+
+@keyframes blinkingBackgroundRed {
+  0%    { background-color: #FF0000;}
+  50%   { background-color: #32CD32;}
+  100%  { background-color: #FF0000;}
+}
+
+@keyframes blinkingBackgroundYellow {
+  0%    { background-color: #FFFF00;}
+  50%   { background-color: #32CD32;}
+  100%  { background-color: #FFFF00;}
+}
+
+@keyframes blinkingStatus {
+  0%    { scale: 100%;}
+  50%   { scale: 120%;}
+  100%  { scale: 100%;}
+}
